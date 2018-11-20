@@ -32,6 +32,7 @@ public class FamilyTree {
     }
 
     private PersonNode getKAncestor(PersonNode node, int k) {
+        if(k == 0) return node;
         return node._parent != null ? getKAncestor(node._parent, k - 1) : null;
     }
 
